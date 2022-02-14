@@ -18,7 +18,7 @@ Use below data blocks for retrieving E2 account email and password already set i
       password = data.aws_ssm_parameter.e2password.value
     }
 
-*Always use the latest version of databricks terraform registry to avoid unexpected issue. Check the latest version at https://registry.terraform.io/providers/databrickslabs/databricks*
+*Always use the latest version of databricks terraform registry to avoid unexpected issues. Check the latest version at https://registry.terraform.io/providers/databrickslabs/databricks*
 
     terraform {
       required_providers {
