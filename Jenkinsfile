@@ -19,7 +19,7 @@ pipeline{
                 sh 'terraform state list'
             }
             else {
-            sh 'terraform ${action} --auto-approve'
+                sh 'terraform ${action} --auto-approve'
             }
         }
     }
