@@ -15,13 +15,11 @@ pipeline{
             }
         }
         stage("Terraform action"){
-            steps{
-                if (action == list_resources){
-                    sh 'terraform state list'
-                }
-                else {
-                sh 'terraform ${action} --auto-approve'
-                }
+            if (action == list_resources){
+                sh 'terraform state list'
+            }
+            else {
+            sh 'terraform ${action} --auto-approve'
             }
         }
     }
