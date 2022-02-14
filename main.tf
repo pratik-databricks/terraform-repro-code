@@ -4,7 +4,15 @@ terraform {
       source  = "databrickslabs/databricks"
       version = "0.4.9"
     }
+    aws = {
+      source  = "hashicorp/aws"
+      version = "4.0.0"
+    }
   }
+}
+
+provider "aws" {
+  region = "us-west-2"
 }
 
 data "aws_ssm_parameter" "e2email" {
